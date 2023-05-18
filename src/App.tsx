@@ -1,27 +1,32 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.scss';
-
-interface Props {
-  onClick: () => void;
-}
-
-export const Provider: React.FC<Props> = React.memo(
-  ({ onClick, children }) => (
-    <button
-      type="button"
-      onClick={onClick}
-    >
-      {children}
-    </button>
-  ),
-);
+import { AsideBar } from './components/AsideBar';
+import { Header } from './components/Header';
+import { Groups } from './pages/Groups';
+import { Orders } from './pages/Orders';
+import { Products } from './pages/Products';
+import { Settings } from './pages/Settings';
+import { Users } from './pages/Users';
 
 export const App: React.FC = () => {
   return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>
-        <TodoList />
-      </Provider>
-    </div>
+    <>
+      <Header />
+      <main>
+        <div className="main__container">
+          <AsideBar />
+          <div className="main__side">
+            <Routes>
+              <Route path="/orders" element={<Orders />} />
+              <Route path="/groups" element={<Groups />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/users" element={<Users />} />
+              <Route path="/settings" element={<Settings />} />
+            </Routes>
+          </div>
+        </div>
+      </main>
+    </>
   );
 };

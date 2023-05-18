@@ -1,0 +1,141 @@
+.order-item{
+  background: #fff;
+  position: relative;
+  &__current::after{
+    position: absolute;
+    content: ">";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 35px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #cfd8dc;
+    border-radius: 0 5px 5px 0;
+
+  }
+}
+
+.order-field:first-child{
+  border-left: 1px solid;
+  border-color: #d7dfe2;
+  border-radius: 5px 0 0 5px;
+}
+
+.order-field:last-child{
+  border-radius: 0 5px 5px 0;
+  border-right: 1px solid;
+  border-color: #d7dfe2;
+}
+
+.order-field {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #d7dfe2;
+  padding: 10px 15px;
+  vertical-align: middle;
+
+  &__menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid #8e9ba2;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  &__menu-button:hover{
+    box-shadow: 0 0 12px 3px #99b9c9;
+  }
+  &__dates{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__short-date{
+      font-size: small;
+    }
+  }
+  &__price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    &__usd{
+      font-size: small;
+    }
+  }
+  &__delete-btn{
+    cursor: pointer;
+    border: transparent;
+    background: transparent;
+    border-radius: 50%;
+    transition: all 0.3s;
+    height: 26px;
+    transition: all 0.3s;
+  }
+  &__delete-btn:hover{
+    box-shadow: 0 0 3px 1px #99b9c9;
+  }
+  &__delete-btn:active{
+    box-shadow: 0 0 12px 3px #99b9c9;
+    background:#99b9c9;
+  }
+}
+
+
+// return (
+//   <div className={cn('order', {
+//     order__current: isSelectedOrder && !isOrderPage,
+//   })}
+//   >
+//     { isOrderPage && <h3 className="order__title">{ title }</h3> }
+//     <button
+//       type="button"
+//       className="order__menu-button"
+//       disabled={isProducts}
+//       onClick={handleMenuClick}
+//     >
+//       <img src="./images/menu-icon.svg" height="20px" alt="mune button" />
+//     </button>
+//     <div className="order__total-products">
+//       {products?.length}
+//       <br />
+//       Products
+//     </div>
+//     <div className="order__dates">
+//       <div className="order__dates__short-date">
+//         {moment(new Date()).format('DD/MM')}
+//       </div>
+//       <div className="order__dates__full-date">
+//         {moment(new Date()).format('DD/MMM/YYYY')}
+//       </div>
+//     </div>
+//     {!isOrderPage && (
+//       <div style={{ width: '50px' }}></div>
+//     )}
+//     {isOrderPage && (
+//       <div className="order__price">
+//         <div className="order__price__usd">2500 $</div>
+//         <div className="order__price__uah">250 000.50 uah</div>
+//       </div>
+//     ) }
+//     { isOrderPage && (
+//       <button
+//         type="button"
+//         className="order__delete-btn"
+//         onClick={onDelete}
+//       >
+//         <img src="./images/delete-icon.svg" height="13px" alt="delete icon" />
+//       </button>
+//     ) }
+//   </div>
+// );
+
+
