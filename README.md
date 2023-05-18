@@ -1,9 +1,30 @@
-# React TypeScript Starter Pack
+# Project Title
 
-To use this template click `Use this template`
+Write here about your project in two-three sentences.
+- [ADD DEMO LINK HERE]()
 
-### Available Scripts
+## Description
 
-`Deploy` - available to deploy your application to gh-pages
+Completed component layout based on screens,
+the following function is implemented:
+- deletion of order, product.
+- when clicking on the menu button, the user is redirected to the group page.
+- implemented search by orders and products.
+- the modal window is implemented through portals.
 
-`SCSS Preprocessor` - available to write your styles with modern style language
+### Technologies
+* React
+* Type Script
+* React Router DOM
+* Redux
+
+## Libraries
+* moment
+* classnames
+
+### Installing
+* Fork and clone this repository
+* Run `npm install` in your terminal
+* Run `npm start`
+* Navigate to `localhost:3000` in your browser
+
