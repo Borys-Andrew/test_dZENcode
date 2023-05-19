@@ -7,8 +7,9 @@ import { getFilteredProducts } from '../../utils';
 import { getCurrentProduct } from '../../utils/getCurrentProduct';
 import { Modal } from '../Modal';
 import { ProductItem } from '../ProductItem';
-// import { ProductItem } from '../ProductItem';
 import './ProductList.scss';
+import monitor from '../../images/monitor-img.png';
+import deleteIcon from '../../images/delete-icon.svg';
 
 export const ProductList: React.FC = () => {
   const [activeModal, setActiveModal] = useState(false);
@@ -61,14 +62,14 @@ export const ProductList: React.FC = () => {
               <div className="item-to-delete__status"></div>
               <div className="item-to-delete__image">
                 <img
-                  src="/images/monitor-img.png"
+                  src={monitor}
                   width="30px"
                   alt="product_image"
                 />
               </div>
               <div className="item-to-delete__details">
                 <span className="item-to-delete__name">{itemToDelete?.title}</span>
-                <span className="item-to-delete__sn">{itemToDelete?.serialNumber}</span>
+                <span className="item-to-delete__product-sn">{itemToDelete?.serialNumber}</span>
               </div>
             </div>
           </div>
@@ -90,7 +91,11 @@ export const ProductList: React.FC = () => {
                 dispatch(productActions.remove(idToDelete));
               }}
             >
-              <img src="./images/delete-icon.svg" height="10px" alt="delete icon" />
+              <img
+                src={deleteIcon}
+                height="10px"
+                alt="delete icon"
+              />
               {' '}
               delete
             </button>

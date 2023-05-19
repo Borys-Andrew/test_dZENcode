@@ -6,6 +6,7 @@ import { TitlePageInfo } from '../../components/TitlePageInfo';
 import { RootState } from '../../Redux/store';
 import { getFilteredOrders, getOrdersWithProducts } from '../../utils';
 import './Orders.scss';
+import plusIcon from '../../images/plus.png';
 
 export const Orders: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -24,7 +25,7 @@ export const Orders: React.FC = () => {
     <div className="orders">
       <div className="orders-info">
         <div className="addOrderBtn">
-          <img src="../images/plus.png" alt="plus-button" />
+          <img src={plusIcon} alt="plus-button" />
         </div>
         <TitlePageInfo name="Orders" count={orders.length} />
       </div>

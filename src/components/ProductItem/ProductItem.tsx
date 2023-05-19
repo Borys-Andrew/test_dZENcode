@@ -8,6 +8,8 @@ import { RootState } from '../../Redux/store';
 import { Product } from '../../types';
 import { getCurrentOrder } from '../../utils';
 import './ProductItem.scss';
+import monitor from '../../images/monitor-img.png';
+import deleteIcon from '../../images/delete-icon.svg';
 
 type Props = {
   producty: Product;
@@ -42,7 +44,7 @@ export const ProductItem: React.FC<Props> = ({ producty, onDelete }) => {
       <td className="product-field">
         <div className="product-field__image">
           <img
-            src="/images/monitor-img.png"
+            src={monitor}
             width="30px"
             alt="product_image"
           />
@@ -141,7 +143,7 @@ export const ProductItem: React.FC<Props> = ({ producty, onDelete }) => {
           onClick={onDelete}
         >
           <img
-            src="./images/delete-icon.svg"
+            src={deleteIcon}
             height="15px"
             alt="delete icon"
           />
