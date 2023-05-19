@@ -5,6 +5,7 @@ import { RootState } from '../../Redux/store';
 import { OrderWithProducts } from '../../types';
 import { GroupsSideContent } from '../GroupsSideContent';
 import './GroupsSidePopup.scss';
+import closeIcon from '../../images/close-icon.svg';
 
 type Props = {
   order: OrderWithProducts | undefined;
@@ -36,7 +37,11 @@ export const GroupsSidePopup: React.FC<Props> = ({ order }) => {
         type="button"
         onClick={() => dispatch(selectedOrderActions.unselect())}
       >
-        <img src="./images/close-icon.svg" width="15px" alt="close icon" />
+        <img
+          src={closeIcon}
+          width="15px"
+          alt="close icon"
+        />
       </button>
       <div className="modal-group__content">
         <div className="modal-group__header">

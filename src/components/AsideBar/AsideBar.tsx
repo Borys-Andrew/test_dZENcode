@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import cn from 'classnames';
+import avatar from '../../images/avatar.jpg';
+import settings from '../../images/settings.png';
 import './AsideBar.scss';
 
 export const AsideBar: React.FC = () => {
@@ -9,11 +11,15 @@ export const AsideBar: React.FC = () => {
       <div className="user-container">
         <img
           className="user-image"
-          src="./images/avatar.jpg"
+          src={avatar}
           alt="user-avatar"
         />
         <div className="user-btn">
-          <img src="./images/settings.png" width="10px" alt="icon" />
+          <img
+            src={settings}
+            width="15px"
+            alt="icon"
+          />
         </div>
       </div>
       <div className="navList">

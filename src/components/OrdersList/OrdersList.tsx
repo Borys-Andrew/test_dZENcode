@@ -6,6 +6,7 @@ import { OrederItem } from '../OrederItem';
 import { actions as orderActions } from '../../Redux/reducers/orderReducer';
 import './OrdersList.scss';
 import { getCurrentOrder } from '../../utils';
+import deleteIcon from '../../images/delete-icon.svg';
 
 type Props = {
   orders: OrderWithProducts[];
@@ -64,7 +65,11 @@ export const OrdersList: React.FC<Props> = ({ orders }) => {
                 dispatch(orderActions.remove(idToDelete));
               }}
             >
-              <img src="./images/delete-icon.svg" height="10px" alt="delete icon" />
+              <img
+                src={deleteIcon}
+                height="10px"
+                alt="delete icon"
+              />
               {' '}
               delete
             </button>

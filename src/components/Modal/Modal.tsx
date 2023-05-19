@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './Modal.scss';
+import closeIcon from '../../images/close-icon.svg';
 
 type Props = {
   onClose: () => void;
@@ -32,7 +33,11 @@ export const Modal: React.FC<Props> = ({ onClose, children }) => {
           type="button"
           onClick={onClose}
         >
-          <img src="./images/close-icon.svg" width="15px" alt="close icon" />
+          <img
+            src={closeIcon}
+            width="15px"
+            alt="close icon"
+          />
         </button>
         <div style={{ paddingLeft: '15px', fontWeight: 'bold', marginBottom: '30px' }}>Are you sure you want to delete this item...?</div>
         {children}

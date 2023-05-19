@@ -8,6 +8,8 @@ import { actions as selectedOrderActions } from '../../Redux/reducers/selectedOr
 import { OrderWithProducts } from '../../types';
 import './OrderItem.scss';
 import { RootState } from '../../Redux/store';
+import menuIcon from '../../images/menu-icon.svg';
+import deleteIcon from '../../images/delete-icon.svg';
 
 type Props = {
   order: OrderWithProducts;
@@ -47,7 +49,11 @@ export const OrederItem: React.FC<Props> = ({ order, onDelete }) => {
           disabled={isProducts}
           onClick={handleMenuClick}
         >
-          <img src="./images/menu-icon.svg" height="20px" alt="mune button" />
+          <img
+            src={menuIcon}
+            height="20px"
+            alt="mune button"
+          />
         </button>
       </td>
       <td className="order-field">
@@ -91,7 +97,11 @@ export const OrederItem: React.FC<Props> = ({ order, onDelete }) => {
             className="order-field__delete-btn"
             onClick={onDelete}
           >
-            <img src="./images/delete-icon.svg" height="13px" alt="delete icon" />
+            <img
+              src={deleteIcon}
+              height="13px"
+              alt="delete icon"
+            />
           </button>
         </td>
       ) }
