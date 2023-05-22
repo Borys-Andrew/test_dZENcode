@@ -8,9 +8,9 @@ import { actions as selectedOrderActions } from '../../Redux/reducers/selectedOr
 import { OrderWithProducts } from '../../types';
 import './OrderItem.scss';
 import { RootState } from '../../Redux/store';
-import menuIcon from '../../images/menu-icon.svg';
-// import deleteIcon from '../../images/delete-icon.svg';
-import { ReactComponent as DeleteIcon } from '../../images/delete-icon.svg';
+// import menuIcon from '../../images/menu-icon.svg';
+import menuIcon from '../../images/menu.png';
+import deleteIcon from '../../images/delete.png';
 
 type Props = {
   order: OrderWithProducts;
@@ -98,12 +98,11 @@ export const OrederItem: React.FC<Props> = ({ order, onDelete }) => {
             className="order-field__delete-btn"
             onClick={onDelete}
           >
-            <DeleteIcon />
-            {/* <img
+            <img
               src={deleteIcon}
               width="17px"
               alt="delete icon"
-            /> */}
+            />
           </button>
         </td>
       ) }

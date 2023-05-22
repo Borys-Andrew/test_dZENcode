@@ -53,6 +53,11 @@
   &__menu-button:hover{
     box-shadow: 0 0 12px 3px #99b9c9;
   }
+  &__menu-button:active{
+    box-shadow: 0 0 12px 3px #99b9c9;
+    background:#99b9c9;
+  }
+
   &__dates{
     display: flex;
     flex-direction: column;

@@ -4,8 +4,9 @@ import { actions } from '../../Redux/reducers/productReducer';
 import { Product } from '../../types';
 import { Modal } from '../Modal';
 import './GroupsSideContent.scss';
-import monitor from '../../images/monitor-img.png';
-import deleteIcon from '../../images/delete-icon.svg';
+// import monitor from '../../images/monitor-img.png';
+import monitor from '../../images/desktop.png';
+import deleteIcon from '../../images/delete.png';
 
 type Props = {
   product: Product;
@@ -97,7 +98,7 @@ export const GroupsSideContent: React.FC<Props> = ({ product }) => {
             >
               <img
                 src={deleteIcon}
-                height="10px"
+                height="13px"
                 alt="delete icon"
               />
               {' '}
