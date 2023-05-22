@@ -4,7 +4,6 @@ import { actions } from '../../Redux/reducers/productReducer';
 import { Product } from '../../types';
 import { Modal } from '../Modal';
 import './GroupsSideContent.scss';
-// import monitor from '../../images/monitor-img.png';
 import monitor from '../../images/desktop.png';
 import deleteIcon from '../../images/delete.png';
 

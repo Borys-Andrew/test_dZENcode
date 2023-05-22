@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.scss';
 import { AsideBar } from './components/AsideBar';
 import { Header } from './components/Header';
@@ -18,6 +18,7 @@ export const App: React.FC = () => {
           <AsideBar />
           <div className="main__side">
             <Routes>
+              <Route path="/" element={<Navigate to="/orders" />} />
               <Route path="/orders" element={<Orders />} />
               <Route path="/groups" element={<Groups />} />
               <Route path="/products" element={<Products />} />

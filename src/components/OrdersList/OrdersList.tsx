@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { OrderWithProducts } from '../../types/OrderWithProducts';
-import { Modal } from '../Modal';
-import { OrederItem } from '../OrederItem';
 import { actions as orderActions } from '../../Redux/reducers/orderReducer';
-import './OrdersList.scss';
+import { OrderWithProducts } from '../../types/OrderWithProducts';
+import { OrderItem } from '../OrederItem';
+import { Modal } from '../Modal';
 import { getCurrentOrder } from '../../utils';
 import deleteIcon from '../../images/delete-icon.svg';
+import './OrdersList.scss';
 
 type Props = {
   orders: OrderWithProducts[];
@@ -30,7 +30,7 @@ export const OrdersList: React.FC<Props> = ({ orders }) => {
       <table className="ordersList">
         <tbody>
           {orders.map(order => (
-            <OrederItem
+            <OrderItem
               key={order.id}
               order={order}
               onDelete={() => handleDeleteOrder(order.id)}
