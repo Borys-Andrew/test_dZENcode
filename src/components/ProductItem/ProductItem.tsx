@@ -8,8 +8,8 @@ import { RootState } from '../../Redux/store';
 import { Product } from '../../types';
 import { getCurrentOrder } from '../../utils';
 import './ProductItem.scss';
-import monitor from '../../images/monitor-img.png';
-import deleteIcon from '../../images/delete-icon.svg';
+import monitor from '../../images/desktop.png';
+import deleteIcon from '../../images/delete.png';
 
 type Props = {
   producty: Product;

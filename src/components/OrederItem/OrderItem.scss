@@ -38,6 +38,10 @@
   padding: 10px 15px;
   vertical-align: middle;
 
+  &__title{
+    min-width: max-content;
+  }
+
   &__menu-button {
     display: flex;
     justify-content: center;
@@ -53,6 +57,11 @@
   &__menu-button:hover{
     box-shadow: 0 0 12px 3px #99b9c9;
   }
+  &__menu-button:active{
+    box-shadow: 0 0 12px 3px #99b9c9;
+    background:#99b9c9;
+  }
+
   &__dates{
     display: flex;
     flex-direction: column;
@@ -67,6 +76,7 @@
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+    min-width: max-content;
     &__usd{
       font-size: small;
     }

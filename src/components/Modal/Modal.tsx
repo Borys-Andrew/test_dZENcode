@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import './Modal.scss';
-import closeIcon from '../../images/close-icon.svg';
+import closeIcon from '../../images/close-icon.png';
 
 type Props = {
   onClose: () => void;
@@ -35,7 +35,7 @@ export const Modal: React.FC<Props> = ({ onClose, children }) => {
         >
           <img
             src={closeIcon}
-            width="15px"
+            width="19px"
             alt="close icon"
           />
         </button>

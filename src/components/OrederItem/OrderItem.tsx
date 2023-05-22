@@ -1,22 +1,21 @@
 import React from 'react';
 import moment from 'moment';
 import { useSelector, useDispatch } from 'react-redux';
-// import { useDispatch } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 import cn from 'classnames';
 import { actions as selectedOrderActions } from '../../Redux/reducers/selectedOrderReduser';
 import { OrderWithProducts } from '../../types';
 import './OrderItem.scss';
 import { RootState } from '../../Redux/store';
-import menuIcon from '../../images/menu-icon.svg';
-import deleteIcon from '../../images/delete-icon.svg';
+import menuIcon from '../../images/menu.png';
+import deleteIcon from '../../images/delete.png';
 
 type Props = {
   order: OrderWithProducts;
   onDelete: () => void;
 };
 
-export const OrederItem: React.FC<Props> = ({ order, onDelete }) => {
+export const OrderItem: React.FC<Props> = ({ order, onDelete }) => {
   const { id, title, products } = order;
   const location = useLocation();
   const navigate = useNavigate();

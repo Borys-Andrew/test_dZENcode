@@ -1,1 +1,1 @@
-export * from './OrederItem';
+export * from './OrderItem';

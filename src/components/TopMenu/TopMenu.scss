@@ -1,0 +1,16 @@
+.menu-container{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-item{
+  display: flex;
+    font-size: 15px;
+  &__current-day{
+    margin-right: 15px;
+  }
+  &__clock-icon{
+    margin-right: 5px;
+  }
+}
