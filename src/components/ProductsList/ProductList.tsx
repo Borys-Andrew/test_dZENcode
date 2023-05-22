@@ -8,8 +8,8 @@ import { getCurrentProduct } from '../../utils/getCurrentProduct';
 import { Modal } from '../Modal';
 import { ProductItem } from '../ProductItem';
 import './ProductList.scss';
-import monitor from '../../images/monitor-img.png';
-import deleteIcon from '../../images/delete-icon.svg';
+import monitor from '../../images/desktop.png';
+import deleteIcon from '../../images/delete.png';
 
 export const ProductList: React.FC = () => {
   const [activeModal, setActiveModal] = useState(false);
@@ -93,7 +93,7 @@ export const ProductList: React.FC = () => {
             >
               <img
                 src={deleteIcon}
-                height="10px"
+                height="11px"
                 alt="delete icon"
               />
               {' '}

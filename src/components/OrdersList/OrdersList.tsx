@@ -5,7 +5,7 @@ import { OrderWithProducts } from '../../types/OrderWithProducts';
 import { OrderItem } from '../OrederItem';
 import { Modal } from '../Modal';
 import { getCurrentOrder } from '../../utils';
-import deleteIcon from '../../images/delete-icon.svg';
+import deleteIcon from '../../images/delete.png';
 import './OrdersList.scss';
 
 type Props = {
