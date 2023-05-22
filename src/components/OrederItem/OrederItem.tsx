@@ -99,7 +99,7 @@ export const OrederItem: React.FC<Props> = ({ order, onDelete }) => {
           >
             <img
               src={deleteIcon}
-              height="13px"
+              width="17px"
               alt="delete icon"
             />
           </button>

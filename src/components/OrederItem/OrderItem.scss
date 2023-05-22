@@ -72,12 +72,14 @@
     }
   }
   &__delete-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     border: transparent;
     background: transparent;
     border-radius: 50%;
-    transition: all 0.3s;
-    height: 26px;
+    height: 30px;
     transition: all 0.3s;
   }
   &__delete-btn:hover{
